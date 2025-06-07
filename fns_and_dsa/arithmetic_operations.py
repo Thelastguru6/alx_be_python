@@ -2,15 +2,18 @@ def perform_operation(num1: float, num2: float, operation: str):
     """
     Performs basic arithmetic operations on two numbers.
     
-    Parameters:
-        num1 (float): First number
-        num2 (float): Second number
-        operation (str): Operation to perform ('add', 'subtract', 'multiply', 'divide')
+    Args:
+        num1: First number as float
+        num2: Second number as float
+        operation: String specifying operation ('add', 'subtract', 'multiply', 'divide')
     
     Returns:
-        float or str: Result of the operation, or error message for division by zero
+        Result of the operation as float, or error message as string for division by zero
+    
+    Raises:
+        ValueError: If operation is not one of the supported types
     """
-    operation = operation.lower().strip()  # Normalize the operation string
+    operation = operation.lower().strip()  # Normalize input
     
     if operation == 'add':
         return num1 + num2
